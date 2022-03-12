@@ -28,7 +28,7 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
         name: build
-        path: /build/
+        path: 
     - name: Make gradlew executable
       run: chmod +x ./gradlew
     - name: Build with Gradle
