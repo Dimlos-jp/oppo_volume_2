@@ -32,6 +32,6 @@ jobs:
       with:
         arguments: build
     - uses: actions/upload-artifact@v3
-      with:
-      name: Package
-      path: path/to/artifact/Package.apk
+  with:
+    name: my-artifact
+    path: path/to/artifact/
