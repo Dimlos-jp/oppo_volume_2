@@ -33,5 +33,5 @@ jobs:
         arguments: build
     - uses: actions/upload-artifact@v3
       with:
-      name: my-artifact
-      path: path/to/artifact/
+      name: build
+      path: /
