@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    name: Build on merge 
+    name: Build 
 
     runs-on: ubuntu-latest
 
