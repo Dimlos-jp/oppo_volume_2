@@ -3,6 +3,7 @@ package com.example.oppo_volume_2
 import android.app.Activity
 import android.content.Context
 import android.media.AudioManager
+import android.media.AudioManager.FLAG_SHOW_UI
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
@@ -58,6 +59,46 @@ internal class MainActivity : Activity() {
             val manager: AudioManager = getSystemService(Context.AUDIO_SERVICE) as AudioManager
             if ( changenotificationVolume == true) {
                 manager.setStreamVolume(AudioManager.STREAM_NOTIFICATION, notificationVolume, 0)
+            }
+        }
+        val bluetoothVolume = intent.getIntExtra("BLUETOOTH_VOLUME",-1)
+        if (bluetoothVolume == -1){
+            var changebluetoothVolume : Boolean = false
+        }else{
+            var changebluetoothVolume : Boolean = true
+            val manager: AudioManager = getSystemService(Context.AUDIO_SERVICE) as AudioManager
+            if ( changebluetoothVolume == true) {
+                manager.setStreamVolume(6, bluetoothVolume, 0)
+            }
+        }
+        val systemVolume = intent.getIntExtra("SYSTEM_VOLUME",-1)
+        if (systemVolume == -1){
+            var changesystemVolume : Boolean = false
+        }else{
+            var changesystemVolume : Boolean = true
+            val manager: AudioManager = getSystemService(Context.AUDIO_SERVICE) as AudioManager
+            if ( changesystemVolume == true) {
+                manager.setStreamVolume(AudioManager.STREAM_SYSTEM, systemVolume, 0)
+            }
+        }
+        val voicecallVolume = intent.getIntExtra("VOICE_CALL_VOLUME",-1)
+        if (voicecallVolume == -1){
+            var changevoicecallVolume : Boolean = false
+        }else{
+            var changevoicecallVolume : Boolean = true
+            val manager: AudioManager = getSystemService(Context.AUDIO_SERVICE) as AudioManager
+            if ( changevoicecallVolume == true) {
+                manager.setStreamVolume(AudioManager.STREAM_VOICE_CALL, voicecallVolume, 0)
+            }
+        }
+        val dtmfVolume = intent.getIntExtra("DTMF_VOLUME",-1)
+        if (dtmfVolume == -1){
+            var changedtmfVolume : Boolean = false
+        }else{
+            var changedtmfVolume : Boolean = true
+            val manager: AudioManager = getSystemService(Context.AUDIO_SERVICE) as AudioManager
+            if ( changedtmfVolume == true) {
+                manager.setStreamVolume(AudioManager.STREAM_DTMF, dtmfVolume, 0)
             }
         }
         this.finish();
