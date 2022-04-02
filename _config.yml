@@ -1,4 +1,5 @@
 theme: jekyll-theme-slate
+title: MacroDroidのOPPOの音量変更の対策
+description: OPPOの音量変更がMacroDroidがフォアグラウンドでなければ出来ない問題に対応するためのアプリです。
 plugins:
   - jekyll-sitemap
-description: OPPOの音量変更がMacroDroidがフォアグラウンドでなければ出来ない問題に対応するためのアプリです。
