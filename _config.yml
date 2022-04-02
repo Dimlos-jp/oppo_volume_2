@@ -4,3 +4,4 @@ description: OPPOの音量変更がフォアグラウンドでなければ出来
 lang: ja_JP
 plugins:
   - jekyll-sitemap
+google_analytics: G-V1WPEK6J3S
